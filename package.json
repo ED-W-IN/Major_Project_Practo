@@ -2,7 +2,13 @@
   "name": "major",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test1":"npx playwright test --shard=1/4",
+    "test2":"npx playwright test --shard=2/4",
+    "test3":"npx playwright test --shard=3/4",
+    "test4":"npx playwright test --shard=4/4",
+    "totaltest":"npm run test1 && npm run test2 && npm run test3 && npm run test4"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
