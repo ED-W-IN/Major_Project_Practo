@@ -41,6 +41,7 @@ export class AccountLogin {
   }
 
   async getloginName() {
+    await this.page.waitForLoadState('networkidle');
     return await this.login_name.innerText()
   }
 
