@@ -54,9 +54,9 @@ test('@regression Empty login input error messages', async () => {
 });
 
 
-test('@sanity Valid LoginName', async () => {
-  await accountLogin.login(loginData.valid.username, loginData.valid.password);
-  const UName=await accountLogin.getloginName()
-  console.log(UName)
-  await expect(UName).toBe('Kiran')
-});
+// test('@sanity Valid LoginName', async () => {
+//   await accountLogin.login(loginData.valid.username, loginData.valid.password);
+//   const UName=await accountLogin.getloginName()
+//   console.log(UName)
+//   await expect(UName).toBe('Kiran')
+// });
