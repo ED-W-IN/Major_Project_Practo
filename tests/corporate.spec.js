@@ -20,13 +20,12 @@ test('Form Schedule button disable with out phone number field input', async ({ 
     await wellnessPage.fillValidDetails();
 
     const button = await wellnessPage.scheduleButton;
-    // await button.waitFor({ state: 'visible' });
     
     await expect(button).toBeDisabled();
 
-    // await expect(isEnabled).toBeTruthy();
+    // await expect(isEnabled).not.toBeTruthy();
   } catch (e) {
-    //expect(button).toBeDisabled()
+  
     console.log('Error in testCase: Form enables Schedule Demo button with out valid input ');
   }
 });

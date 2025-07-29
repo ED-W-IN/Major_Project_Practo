@@ -9,7 +9,7 @@ test.beforeEach(async ({ page }) => {
   await accountLogin.gotoLoginPage();
 });
 
-test.afterEach(async ({ page }) => {
+test.afterEach(() => {
   console.log('Test finished.');
 });
 
@@ -54,9 +54,9 @@ test('@regression Empty login input error messages', async () => {
 });
 
 
-// test('@sanity Valid Login', async () => {
-//   await accountLogin.login(loginData.valid.username, loginData.valid.password);
-//   const UName=await accountLogin.getloginName()
-//   console.log(UName)
-//   await expect(UName).toBe('Kiran')
-// });
+test('@sanity Valid LoginName', async () => {
+  await accountLogin.login(loginData.valid.username, loginData.valid.password);
+  const UName=await accountLogin.getloginName()
+  console.log(UName)
+  await expect(UName).toBe('Kiran')
+});

@@ -1,6 +1,7 @@
 
 export class AccountLogin {
 
+  // Constructor to initialize the page and locators
   constructor(page) {
     this.page = page;
     this.loginLink = page.locator("//a[normalize-space()='Login / Signup']");
@@ -13,11 +14,13 @@ export class AccountLogin {
     this.login_name=page.locator("span[class='up-triangle'] span[class='user_info_top']")
   }
 
+  // Method to navigate to the login page
   async gotoLoginPage() {
     await this.page.goto('https://www.practo.com/', { waitUntil: 'domcontentloaded' });
     await this.loginLink.click();
   }
 
+  // Method to perform login with provided username and password
   async login(username, password) {
 
     await this.usernameInput.fill(username);

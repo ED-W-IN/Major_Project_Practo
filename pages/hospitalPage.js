@@ -53,7 +53,7 @@ export class HospitalPage {
                     const availabilityText = (await card.locator('.pd-right-2px-text-green').textContent()).trim();
                     const locationText = (await card.locator('.c-locality-info').textContent()).trim();
 
-                    const ratingValue = parseFloat(ratingText);
+                    const ratingValue = parseFloat(ratingText); // Convert rating to a number
 
                     if (ratingValue > 3.5 && availabilityText.includes('24x7')) {
                         qualifiedHospitals.push({
@@ -80,6 +80,7 @@ export class HospitalPage {
         console.log(`Number Of Hospitals : ${countofHospitals}`);
         console.log(List)
     }
+    
     async enterInvalidSearchAndCaptureMessage(invalidText) {
 
         await this.hospitaltype.click(); // Ensure focus
